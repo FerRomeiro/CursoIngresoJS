@@ -8,5 +8,7 @@ function mostrar()
 	alert(nombreIngresado);
 
 }
-
+/* let nombre;
+   nombre = document.getelementById("txtIdNombre").value;
+   alert(nombre); */
 
