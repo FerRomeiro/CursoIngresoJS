@@ -1,6 +1,15 @@
+
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
 
-}//FIN DE LA FUNCIÓN
+	let edad;
+edad = parseInt(document.getElementById('txtIdEdad').value);
+
+if (edad == 15){ //PREGUNTAR PORQUE CON SOLO UN = TAMBIEN FUNCIONA
+	alert('NIÑA BONITA');
+}
+
+document.getElementById('txtIdEdad').value = "";
+
+}
