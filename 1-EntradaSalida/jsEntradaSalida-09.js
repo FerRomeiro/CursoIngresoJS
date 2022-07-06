@@ -20,10 +20,12 @@ function mostrarAumento()
   let num3; // porcentaje
 
   num1 = parseInt(document.getElementById('txtIdSueldo').value);
-  num3= prompt('ingrese porcentaje');
+  num3 = prompt('ingrese porcentaje');
+  //num3 = parseInt(num3);
   num2 = num1 * num3 / 100;
+  num2 = num1 + num2;
   
   document.getElementById('txtIdResultado').value = num2;
   
-
+   
 } 

@@ -14,8 +14,19 @@ else{
 
 
 
-
 }
+/* OTRA FORMA DE HACERLO 
+{
+	let edad
+	edad = parseInt(document.getElementById('txtIdEdad').value);
+	if( edad < 18){
+       alert('es menor de edad');
+	}
+	else{
+		alert('es mayor de edad');
+	}
+}
+ 
 /*
 ESTO SE PODRIA HACER PERO ESTA MAL
 if( edad > 18){
