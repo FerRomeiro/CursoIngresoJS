@@ -22,5 +22,7 @@ function mostrarAumento()
   num3 = num1 * num2/100;
   document.getElementById('txtIdResultado').value = num3;
 
+  
+
 }
 
