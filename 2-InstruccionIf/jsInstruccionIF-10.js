@@ -1,6 +1,20 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");
+     let nota;
+	 let maximo = 10;
+	 let minimo = 1;
 
-}//FIN DE LA FUNCIÓN
+	 nota = Math.round(Math.random() * (maximo-minimo) + minimo);
+     
+	 
+	 if( nota >= 9 ){
+        alert( nota +  ' EXCELENTE');
+	 }
+	 else if( nota < 4 ){
+		alert(nota + ' Desaprobado');
+	 }
+     else{
+		alert( nota + ' Aprobado'); //PREGUNTA AL PROFE PORQUE NO DA CON ALT 96 
+	 }
+	 
+}
