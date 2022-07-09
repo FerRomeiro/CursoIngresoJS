@@ -12,7 +12,7 @@ function mostrar()
 		}
 	else if( edad > 65){
 			alert('Anciano');             // FORMA RESUMIDA DE LO DE ABAJO
-		}                                 // PARA EL IF ELSE Y Q NO SEA ENGORROSO
+		}                                 // PARA EL IF ELSE Y NO SEA ENGORROSO
 		else{
 			alert('Niña');
 		}
@@ -50,4 +50,3 @@ document.getElementById('txtIdEdad').value = "";
 	}
 	document.getElementById('txtIdEdad').value = "";
 */
-}
