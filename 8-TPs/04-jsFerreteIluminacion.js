@@ -10,18 +10,45 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- let cantidad;
- let lamparas = 35;
- let precioConDescuento = 2;
- cantidad = parseInt(document('txtIdCantidad').value);
- precioConDescuento = parseInt(document('txtIdprecioDescuento').value);
- 
- if( cantidad >= 6 ){
 
-    precioConDescuento = (lamparas * cantidad) / precioConDescuento;
-    document.getElementById('txtIdprecioDescuento').value = precioConDescuento;
+let lamparas = 35;
+let cantidad;
+let marca;
+let precioDescuento;
+let precioFinal;
+
+cantidad = document.getElementById('txtIdCantidad').value;
+precioDescuento = document.getElementById('txtIdprecioDescuento').value;
+marca = document.getElementById('Marca').value;
 
 
- }
+switch( marca ){
+        case "ArgentinaLuz":
+        case "FelipeLamparas":
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+             if( cantidad >= 6 ){
+                 precioFinal = (lamparas*cantidad)/2;
+                 alert(precioFinal + "UNO");
+             }
+            
+         
 
+        case "ArgentinaLuz":
+        if( cantidad == 5 ){
+            precioFinal = ((cantidad*40)/100)*lamparas; 
+            alert(precioFinal + "TRES");
+         }
+         else{
+            precioFinal = ((cantidad*30)/100)*lamparas;
+            alert(precioFinal + "CUATRO");
+         }
+
+
+      
+
+
+
+}
 }

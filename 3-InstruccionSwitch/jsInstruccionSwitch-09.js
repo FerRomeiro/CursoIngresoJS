@@ -20,50 +20,85 @@ function mostrar()
 				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
             break;
 			}
+			
 		case "Invierno":
 			if( destino == "Cataratas" || destino == "Cordoba"){
-				precioFinal = (precioViaje*10)/100;
+                precioFinal = (precioViaje*10)/100;
 				precioFinalPorcentaje = precioViaje - precioFinal;
-				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
-			break;
+				alert('EL precio del viaje es ' + precioFinalPorcentaje + '$');
+				 // NO OLVIDARSE DE QUEBRAR PORQUE SINO APARECE TODOS LOS ALERTS
+			break;	// EN ESTE CASO SE QUIEBRA DENTRO DE LAS LLAVES DE IF pero puede ser afuera
 			}
-	    case "Verano":
-			if( destino == "Bariloche"){
-                precioFinal = (precioViaje*20)/100;
+			
+		case "Invierno":
+			if( destino == "Mar del plata"){
+				precioFinal = (precioViaje*20)/100;
 				precioFinalPorcentaje = precioViaje - precioFinal;
 				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
-			break;
+				break;
+			}
+		case "Verano":
+			if( destino == "Bariloche"){
+				precioFinal = (precioViaje*20)/100;
+				precioFinalPorcentaje = precioViaje - precioFinal;
+				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
+				break;
 			}
 		case "Verano":
 			if( destino == "Cataratas" || destino == "Cordoba"){
 				precioFinal = (precioViaje*10)/100;
-				precioFinalPorcentaje = precioFinal + precioViaje;
-				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
-			break;
-			}
+				precioFinalPorcentaje = precioViaje + precioFinal;
+				alert('EL precio del viaje es ' + precioFinalPorcentaje + '$');
+				break;
+			}	
 		case "Verano":
-		    if( destino == "Mar del plata"){
-			precioFinal = (precioViaje*20)/100;
-			precioFinalPorcentaje = precioFinal+precioViaje;
-			alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
-			break;
-		    }
-	
+			if( destino == "Mar del plata"){
+				precioFinal = (precioViaje*20)/100;
+				precioFinalPorcentaje = precioViaje + precioFinal;
+				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
+				break;
+			}	
+
+
+		/*	
 		case "Otoño":
 		case "Primavera":
-			if( destino == "Cataratas" ){
-            precioFinal = (precioViaje*10)/100;
-			precioFinalPorcentaje = precioFinal + precioViaje;
-			alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
-		    }
-			else if( destino == "Mar del plata" ){
-			precioFinal = (precioViaje*10)/100;
-			precioFinalPorcentaje = precioFinal + precioViaje;
-			alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
+			if( destino == "Bariloche" ){
+				precioFinal = (precioViaje*10)/100;
+				precioFinalPorcentaje = precioViaje + precioFinal;
+				alert('EL precio del viaje es ' + precioFinalPorcentaje + '$');
+				break;
 			}
-            	
-	}
+		case "Otoño":
+		case "Primavera":
+			if( destino == "Cataratas" || destino == "Mar del plata"){
+				precioFinal = (precioViaje*10)/100;
+				precioFinalPorcentaje = precioViaje + precioFinal;
+				alert('EL precio del viaje es ' + precioFinalPorcentaje + '$');
+			}
+			else{
+				alert('Cordoba ' + precioViaje);
+				break;
+			}	
+		*/
+		case "Otoño":
+		case "Primavera":
+			if( destino == "Bariloche" || destino == "Cataratas" ){
+				precioFinal = (precioViaje*10)/100;
+				precioFinalPorcentaje = precioViaje + precioFinal;
+				alert('EL precio del viaje es ' + precioFinalPorcentaje + '$');
+			}	
+			else if( destino == "Mar del plata" ){
+				precioFinal = (precioViaje*10)/100;
+				precioFinalPorcentaje = precioViaje + precioFinal;
+				alert('EL precio del viaje es ' + precioFinalPorcentaje + '$');
+			}
+			else{
+				alert('CORDOBA NO TIENE DESCUENTO ' + precioViaje + '$');
+			}
 
+
+		
 }  
 
 
