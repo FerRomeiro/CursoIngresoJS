@@ -1,3 +1,6 @@
+// Alumno: Fernando Romero Montero
+// Div: j
+
 function mostrar()
 {
  let mes = document.getElementById('txtIdMes').value;

@@ -1,3 +1,6 @@
+// Alumno: Fernando Romero Montero
+// Div: J
+
 function mostrar()
 {
  let hora;

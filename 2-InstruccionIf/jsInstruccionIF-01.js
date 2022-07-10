@@ -1,4 +1,5 @@
-
+// Alumno: Fernando Romero Montero
+// Div: J
 
 function mostrar()
 {

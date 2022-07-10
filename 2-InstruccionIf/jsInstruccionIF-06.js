@@ -1,3 +1,6 @@
+// Alumno: Fernando Romero Montero
+// Curso: J
+
 function mostrar()
 {
 	let edad;

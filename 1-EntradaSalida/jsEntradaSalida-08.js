@@ -1,15 +1,12 @@
-/*
-Debemos lograr tomar Los numeros por ID ,
-transformarlos a enteros (parseInt),realizar la operación correcta y 
-mostrar el resto entre el dividendo y el divisor.
-ej.: "El resto es 0 ."*/
+// Alumno: Fernando Romero Montero
+// Div: J
 function SacarResto()
 {
-	let num1;
-	let num2;
+	let numeroUno;
+	let numeroDos;
 	let resultado;
-	num1 = parseInt(document.getElementById('txtIdNumeroDividendo').value);
-	num2 = parseInt(document.getElementById('txtIdNumeroDivisor').value);
+	numeroUno = parseInt(document.getElementById('txtIdNumeroDividendo').value);
+	numeroDos = parseInt(document.getElementById('txtIdNumeroDivisor').value);
 	resultado = num1 / num2;
 	alert('El resto es ' + resultado);
 }

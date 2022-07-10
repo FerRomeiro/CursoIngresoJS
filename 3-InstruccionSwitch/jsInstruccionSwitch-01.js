@@ -1,3 +1,5 @@
+// Alumno: Fernando Romero Monter
+// Div: J
 function mostrar()
 {
    let mes;
