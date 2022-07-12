@@ -53,3 +53,22 @@ document.getElementById('txtIdEdad').value = "";
 	}
 	document.getElementById('txtIdEdad').value = "";
 */
+
+let edad;
+let mensaje;
+	edad = parseInt(document.getElementById('txtIdEdad').value);
+	
+	
+    if( !( edad <= 13 || edad >= 17)){
+        mensaje = 'Adolescente';
+	}
+    else if( edad > 18){
+	    mensaje = 'Adulto';
+		}
+	else if( edad > 65){
+		mensaje = 'Anciano'            
+		}                                 
+		else{
+		mensaje = 'Niña'
+		}
+	alert(mensaje);  // document.write(mensaje);

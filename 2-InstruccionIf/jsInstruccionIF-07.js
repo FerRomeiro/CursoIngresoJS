@@ -22,3 +22,11 @@ function mostrar()
 
 
 }
+
+let numeroUno;
+let numeroDos;
+let numeroTres;
+
+if (  ){
+
+}
