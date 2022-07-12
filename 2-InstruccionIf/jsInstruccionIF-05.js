@@ -3,9 +3,8 @@
 function mostrar()
 {
 
-
 	let edad;
-	edad = parseInt(document.getElementById('txtIdEdad').value);
+	edad = Parseint(document.getElementById('txtIdEdad').value);
 	if( edad < 13 || edad >= 18){
         
           alert('NO es un adolescente');
@@ -14,6 +13,13 @@ function mostrar()
 	else{
 		alert('ES ADOLESCENTE');
 	}
+	/*
+	let edad;
+	edad = parseInt(document.getElementById('txtIdEdad').value);
+	if(!( edad < 18 )){
+          alert('no es adolescente');
+	}
+	*/
 	
 //   RECORDAR QUE EL || (OR) EN if SE PUEDE USAR PARA QUE CUMPLA UNA DE LAS 2
 //  CONDICIONES Y ASI ENTRA AL ALERT SINO NO ENTRA
