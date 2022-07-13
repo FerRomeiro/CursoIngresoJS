@@ -2,7 +2,78 @@
 // Div: J
 function CalcularPrecio () 
 {
+    const lamparas = 35;
+    let cantidadLamparas;
+    let precioDescuento;
+    let precioFinal;
+    let precioNormal;
+    let marca;
+    let mensaje;
+    let ingresosBrutos;
+    let precioConIngresosBrutos;
 
+     cantidadLamparas = document.getElementById('txtIdCantidad').value;
+     precioConDescuento = document.getElementById('txtIdprecioDescuento').value;
+     marca = document.getElementById('Marca').value;
+     
+     if( cantidadLamparas >= 6 ){
+         descuento = 50;
+         mensaje = 'Descuento del 50%';
+     }
+     else if( cantidadLamparas == 5 ){
+          if( marca == 'ArgentinaLuz' ){
+              descuento = 40;
+              mensaje = 'Descuento del 40%';
+          }
+          else{
+              descuento = 30;
+              mensaje = 'Descuento del 30%';
+          }
+     }
+     else if( cantidadLamparas == 4 ){
+          if( marca == 'ArgentinaLuz' || marca == 'FelipeLamparas' ){
+              descuento = 25;
+              mensaje = 'Descuento del 25%';
+          }
+          else{
+              descuento = 20;
+              mensaje = 'Descuento del 20%';
+          }
+     }
+     else if( cantidadLamparas == 3 ){ 
+          if( marca == "ArgentinaLuz" ){
+              descuento = 15;
+              mensaje = 'Descuento del 15%';
+            }
+     else if( marca == 'FelipeLamparas' ){
+              descuento = 10;
+              mensaje = 'Descuento del 10%'
+          }
+          else{
+            descuento = 5;
+            mensaje = 'Descuento del 5%';
+          }
+     }
+     else{
+        descuento = 0;
+        mensaje = 'Descuento igual a 0%'
+     }
+
+     
+     precioDescuento = (((cantidadLamparas*lamparas)*descuento)/100);
+     precioNormal = (cantidadLamparas*lamparas);
+     precioFinal = precioNormal - precioDescuento;
+     if( precioFinal > 120){
+         ingresosBrutos = ((precioFinal*10)/100);
+         precioConIngresosBrutos = (precioFinal + ingresosBrutos);
+         alert('PAGO ' + precioConIngresosBrutos + '$ SIENDO ' + ingresosBrutos + '$ EL IMPUESTO QUE SE PAGO');
+     }
+     
+     alert(mensaje);   
+     document.getElementById('txtIdprecioDescuento').value = precioFinal;
+
+    }
+/*    
 const lamparas = 35;
 let cantidad;
 let marca;
@@ -72,7 +143,7 @@ switch( cantidad ){
 
 
 
-
+*/
 
 /*
 
@@ -102,7 +173,7 @@ switch (marca){
         }
   
         */
-}
+
 
 
 /*

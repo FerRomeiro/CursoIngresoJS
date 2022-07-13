@@ -51,3 +51,5 @@ numero = document.getElementById('txtIdNumero').value;
     alert('NO ES EL GANADOR Y LE FALTA ');
   }
   */
+
+
