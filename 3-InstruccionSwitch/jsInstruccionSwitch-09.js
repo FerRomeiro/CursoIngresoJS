@@ -3,6 +3,72 @@
 
 function mostrar()
 {
+   let estacion;
+   let destino;
+   let precioFinal;
+   const viaje = 15000;
+   let porcentaje;
+   let mensaje;
+
+
+   estacion = document.getElementById('txtIdEstacion').value;
+   destino = document.getElementById('txtIdDestino').value;
+   
+   if( estacion == 'Invierno' ){
+       if( destino == 'Bariloche' ){
+           porcentaje = 20;
+	   }
+       else if( destino == 'Cordoba' || destino == "Cataratas" ){
+           porcentaje = -10;
+	   }
+	   else{
+		   porcentaje = -20;
+	   }
+	}
+    if( estacion == "Verano" ){
+        if( destino == "Bariloche" ){
+            porcentaje = -20;
+		}
+		else if( destino == "Cataratas" || destino == "Cordoba" ){
+            porcentaje = 10;
+		}
+		else{
+			porcentaje = 20;
+		}
+	}
+	if( estacion == "Otoño" || estacion == "Primavera" ){
+        if( destino == "Bariloche")
+		    porcentaje = 10;
+		else if( destino == "Cataratas" || destino == "Mar del plata" ){
+            porcentaje = 10;
+		}
+		else{
+			porcentaje = 0;
+		}
+	}
+	
+   precioFinal = viaje + ((viaje*porcentaje)/100);
+   mensaje = 'Precio final es con un porcentaje del ' + porcentaje + '% es ' + precioFinal + '$';
+   alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+	/*
 	let estacion;
 	let destino;
 	const precioViaje = 15000;
@@ -58,7 +124,7 @@ function mostrar()
 				alert('El precio del viaje es ' + precioFinalPorcentaje + '$');
 				break;
 			}	
-
+*/
 
 		/*	
 		case "Otoño":
@@ -81,6 +147,7 @@ function mostrar()
 				break;
 			}	
 		*/
+		/*
 		case "Otoño":
 		case "Primavera":
 			if( destino == "Bariloche" || destino == "Cataratas" ){
@@ -96,10 +163,10 @@ function mostrar()
 			else{
 				alert('CORDOBA NO TIENE DESCUENTO ' + precioViaje + '$');
 			}
-
+*/
 
 		
-}  
+  
 
 
 
@@ -125,4 +192,3 @@ function mostrar()
 	
 */
 
-}
