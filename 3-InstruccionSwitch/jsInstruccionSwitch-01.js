@@ -2,6 +2,34 @@
 // Div: J
 function mostrar()
 {
+ let mes;
+ let mensaje; 
+ mes = document.getElementById('txtIdMes').value
+ if( mes == "Enero" ){
+     mensaje = "que comiences bien el año";
+ }else if( mes == "Marzo" ){
+     mensaje = "Clases";
+ }else if( mes == "Julio" ){
+     mensaje = "vacas";
+ }else if( mes == "Diciembre" ){
+     mensaje = "Fiestas ";
+ }
+ else{
+	 mensaje = "";
+ }
+ 
+ 
+ alert(mensaje);
+
+}
+
+
+
+
+
+
+
+	/*
    let mes;
    mes = document.getElementById('txtIdMes').value; 
    // let mes = document.getElementById('txtIdMes').value;
@@ -16,7 +44,7 @@ function mostrar()
 		alert('FIN DE AÑO');
 		break;
  } 
- 
+ */
    /* 
    switch (mes){
 	      case "Enero":
@@ -34,4 +62,3 @@ function mostrar()
 			break;
 	}
 */
-}

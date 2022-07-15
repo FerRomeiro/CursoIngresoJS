@@ -3,6 +3,38 @@
 
 function mostrar()
 {
+
+ let hora;
+ let mensaje;
+
+ hora = document.getElementById('txtIdHora').value;
+
+ if( hora > 6 && hora < 12){
+     mensaje = "Es de mañana"
+ }else{
+	 mensaje = "";
+ }
+ alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+	/*
  let hora;
  hora = document.getElementById('txtIdHora').value;
  hora = parseInt(hora);
@@ -37,10 +69,9 @@ function mostrar()
   }
 
 */
- }
+ 
 	
 	
 
 
 
-}

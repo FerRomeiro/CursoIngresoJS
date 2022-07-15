@@ -3,8 +3,51 @@
 
 function mostrar()
 {
+  let hora;
+  let mensaje; 
+
+
+  hora = document.getElementById('txtIdHora').value;
+
+  if( hora > 6 && hora < 12){
+      mensaje = "es de mañana";
+  }else if( hora > 11 && hora < 20 ){
+      mensaje = "es de tarde";
+  }else if( hora > 19 && hora < 25 ){
+      mensaje = "es de noche";
+  }else if( hora >= 0 && hora <= 6 ){
+      mensaje = "es de noche";
+  }else{
+	  mensaje = "no existe";
+  }
+
+alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+	/*
 	let hora;
 	hora=parseInt(document.getElementById('txtIdHora').value);
+	*/
 /*
 	switch(hora){
 		case 7:
@@ -56,6 +99,7 @@ function mostrar()
 			alert('ES DE NOCHE');
 		}
 */
+/*
 		if( hora >= 7 && hora <= 11 ){
              alert('Es de mañana');
 		}
@@ -69,6 +113,7 @@ function mostrar()
 			alert('Es de noche');
 		}
 	}
+	*/
 //if es de doble == 
 
 // ESTE ES EL METODO CONTRADICTORIO

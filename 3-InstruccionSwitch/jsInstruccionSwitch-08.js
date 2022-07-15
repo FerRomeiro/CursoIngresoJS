@@ -3,6 +3,40 @@
 
 function mostrar()
 {
+  let destino;
+  let mensaje; 
+
+  destino = document.getElementById('txtIdDestino').value
+  if( destino == "Bariloche" || destino == "Ushuaia" ){
+      mensaje = "FRIO";
+  }else{
+	  mensaje = "CALOR";
+  }
+  alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+	/*
 	let destino;
 	destino = document.getElementById('txtIdDestino').value;
 switch( destino ){
@@ -13,7 +47,8 @@ switch( destino ){
 default:  
 	alert("HACE CALOR");
 }
-}
+*/
+
 
 // ESTRUCTURA DEL SWITCH CON DEFAULT:       
 // switch(){
