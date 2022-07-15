@@ -2,6 +2,40 @@
 // Div: J
 function mostrar()
 {
+  let edad;
+  let mensaje;
+
+  edad = document.getElementById('txtIdEdad').value;
+
+  if( edad > 17 ){
+      mensaje = "Mayor edad";
+  }
+  else{
+	  mensaje = "Menor de edad";
+  }
+
+  alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/*
+
+
 let edad;
 edad = parseInt(document.getElementById('txtIdEdad').value);
 if( edad >= 18){
@@ -17,6 +51,7 @@ else{
 
 
 }
+*/
 /* OTRA FORMA DE HACERLO 
 {
 	let edad

@@ -2,7 +2,23 @@
 // Div: J
 function mostrar()
 {
+  let edad;
+  let mensaje;
 
+  edad = document.getElementById('txtIdEdad').value;
+
+  if( edad > 17 ){
+      mensaje = "no es adolescente";
+  }
+  else{
+	  mensaje = "";
+  }
+  alert(mensaje);
+
+
+
+
+/*
 	let edad;
 	edad = Parseint(document.getElementById('txtIdEdad').value);
 	if( edad < 13 || edad >= 18){

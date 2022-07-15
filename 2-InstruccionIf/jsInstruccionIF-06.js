@@ -3,6 +3,38 @@
 
 function mostrar()
 {
+  let edad;
+  let mensaje;
+
+  edad = document.getElementById('txtIdEdad').value;
+  if( edad > 18 ){
+      mensaje = "MAYOR DE EDAD";
+  }else if( edad > 12 && edad < 18){
+      mensaje = "ADOLESCENTE";
+  }else{
+	  mensaje = "ES NIÑO";
+  }
+
+ 
+
+
+  alert(mensaje);
+ 
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+/*	
 	let edad;
 	edad = parseInt(document.getElementById('txtIdEdad').value);
 	
@@ -21,7 +53,7 @@ function mostrar()
 		}
 	}
 document.getElementById('txtIdEdad').value = "";
- 
+*/ 
  /*
     if( !( edad <= 13 || edad >= 17)){
         alert('Adolescente')
@@ -53,7 +85,7 @@ document.getElementById('txtIdEdad').value = "";
 	}
 	document.getElementById('txtIdEdad').value = "";
 */
-
+/*
 let edad;
 let mensaje;
 	edad = parseInt(document.getElementById('txtIdEdad').value);
@@ -72,3 +104,4 @@ let mensaje;
 		mensaje = 'Niña'
 		}
 	alert(mensaje);  // document.write(mensaje);
+	*/

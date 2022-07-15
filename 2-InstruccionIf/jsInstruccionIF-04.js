@@ -2,6 +2,40 @@
 // Div: J 
 function mostrar()
 {
+  let edad;
+  let mensaje;
+
+  edad = document.getElementById('txtIdEdad').value;
+
+  if( edad > 12 && edad < 18 ){ // RECORDAR EL OPERADOR LOGICO || ES SI ES O ES, NO CIERRA. EL OTRO OPERADOR LOGICO ES && Y ES SI ES Y ES, ESTE SI CIERRA
+      mensaje = "Adolescente";
+  }
+  else{
+	  mensaje = "No sos adolescente";
+  }
+
+  alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/*
 	let edad;
 	edad = parseInt(document.getElementById('txtIdEdad').value);
@@ -19,11 +53,13 @@ function mostrar()
 	document.getElementById('txtIdEdad').value = ""
 	
 	*/ 
+	/*
     let edad;
 	edad = parseInt(document.getElementById('txtIdEdad').value);
 	if( !(edad < 13 || edad > 17)){
          alert('ADOLESCENTE');
 	} 
+	*/
     /*
 	let edad; 
 	edad = parseInt(document.getElementById('txtIdEdad').value);
