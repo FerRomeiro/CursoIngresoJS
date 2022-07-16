@@ -3,6 +3,78 @@
 
 function mostrar()
 {
+	let estacion = document.getElementById('txtIdEstacion').value;
+	let destino = document.getElementById('txtIdDestino').value;
+	let mensaje;
+	const PASAJE = 15000;
+	let precioFinal;
+	let porcentaje;
+	let precioNormal;
+                      //PARA UNIFICAR EL SWITCH LO HACES EN EL DEFAULT SUMANDO OTRO case 
+	switch(estacion){
+	      case "Invierno":
+          switch(destino){
+                 case "Bariloche":
+				 porcentaje = 20;
+				 mensaje = "Aumento del 20%";
+				 break;
+				 case "Cordoba":
+				 porcentaje = -10;
+				 mensaje = "Descuento del 10%";
+				 break;
+				 case "Cataratas":
+				 porcentaje = -10;
+				 mensaje = "Descuento del 10%";
+				 break;
+				 case "Mar del plata":
+				 porcentaje = -20;
+				 mensaje = "Descuento del 20%";	 
+				 break;
+				 default:  
+		         }
+
+                 case "Verano":
+                 switch(destino){
+                 case "Bariloche":
+	             porcentaje = -20;
+	             mensaje = "Descuento del 20%";
+	             break;
+	             case "Cataratas":
+	             porcentaje = 10;
+	             mensaje = "Aumento del 10%";
+	             break;
+	             case "Cordoba":
+	             porcentaje = 10;
+	             mensaje = "Aumento del 10%";
+	             break;
+                 case "Mar del plata":
+	             porcentaje = 20;
+	             mensaje = "Aumento del 20%"
+                 } 
+                 case "Otoño":
+				 case "Primavera":
+				 switch( destino ){
+                         case "Bariloche":
+					     porcentaje = 10;
+						 mensaje = "Aumento del 10%";
+						 break;
+						 case "Cataratas":
+						 porcentaje = 10;
+						 mensaje = "Aumento del 10%";
+						 break;
+						 case "Cordoba":
+						 porcentaje = 0;
+						 mensaje = "Sin descuento";
+						 case "Mar del plata":
+						 porcentaje = 10;
+						 mensaje = "Aumento del 10%";
+				 }
+		         }
+	precioNormal = (PASAJE*porcentaje)/100;
+	precioFinal = PASAJE + precioNormal;
+	alert(mensaje);
+	alert(precioFinal + '$');
+	/*
   let estacion = document.getElementById('txtIdEstacion').value;
   let destino = document.getElementById('txtIdDestino').value;
   let mensaje;
@@ -72,7 +144,7 @@ function mostrar()
 
 
 
-
+*/
 
 
 
@@ -147,7 +219,7 @@ function mostrar()
 
 
 
-}
+
 
 
 
