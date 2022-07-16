@@ -3,6 +3,89 @@
 
 function mostrar()
 {
+  let estacion = document.getElementById('txtIdEstacion').value;
+  let destino = document.getElementById('txtIdDestino').value;
+  let mensaje;
+  const PASAJE = 15000;
+  let precioFinal;
+  let porcentaje;
+  let precioNormal;
+
+  if( estacion == "Invierno" && destino == "Bariloche"){
+      porcentaje = 10;
+	  mensaje = "Aumento del 20%";
+  } 
+  else{
+	  if( estacion == "Invierno" && destino == "Cataratas"){
+	  porcentaje = -10;
+	  mensaje = "Descuento del 10%";
+	  }else{
+		if( estacion == "Invierno" && destino == "Cordoba" ){
+            porcentaje = -10;
+			mensaje = "Descuento del 10%";
+		}else{
+		   if(estacion == "Invierno" && destino == "Mar del plata"){
+			  porcentaje = -20;
+			  mensaje = "Descuento del 20%";
+		   }else{
+			    if( estacion == "Verano" && destino == "Bariloche"){
+					porcentaje = -20;
+					mensaje = "Descuento del 20%";
+				}else{
+					 if( estacion == "Verano" && destino == "Cataratas" ){
+						 porcentaje = 10;
+						 mensaje = "Aumento del 10%";
+					 }else{
+						  if( estacion == "Verano" && destino == "Mar del plata" ){
+                              porcentaje = 20;
+							  mensaje = "Aumento del 20%";
+						  }else{
+							   if( estacion == "Verano" && destino == "Cordoba" ){
+                                   porcentaje = 10;
+								   mensaje = "Aumento del 10%";
+							   }else{
+								    if( estacion == "Otoño" || estacion == "Primavera" ){
+                                        if( destino == "Bariloche" || destino == "Cataratas" || destino == "Mar del plata" ){
+                                            porcentaje = 10;
+											mensaje = "Aumento del 10%";
+										}else{
+											if( destino == "Cordoba")
+											porcentaje = 0;
+											mensaje = "Sin descuento putazo";
+										}
+									}
+							   }
+						  }
+					 }
+				}
+		   }
+	  }
+  }   
+ 
+ precioNormal = (PASAJE*porcentaje)/100;
+ precioFinal = PASAJE + precioNormal;
+ alert(mensaje);
+ alert(precioFinal);
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+	/*
    let estacion;
    let destino;
    let precioFinal;
@@ -59,7 +142,7 @@ function mostrar()
 
 
 
-
+*/
 
 
 

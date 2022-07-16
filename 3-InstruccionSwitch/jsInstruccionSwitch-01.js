@@ -1,7 +1,28 @@
 // Alumno: Fernando Romero Monter
 // Div: J
 function mostrar()
-{
+{   
+
+	let mes;
+	mes = document.getElementById('txtIdMes').value; 
+	// let mes = document.getElementById('txtIdMes').value;
+  switch(mes){
+	 case "Enero":
+		 alert('que comiences bien el año');
+		 break;
+	 case "Marzo":
+		 alert("CLASES");
+		 break;
+	 case "Julio":
+		 alert('se viene las vacas');
+		 break;
+	 case "Diciembre":
+		 alert('FIN DE AÑO');
+		 break;
+
+  }
+}
+	/*
  let mes;
  let mensaje; 
  mes = document.getElementById('txtIdMes').value
@@ -17,11 +38,11 @@ function mostrar()
  else{
 	 mensaje = "";
  }
- 
- 
+ */
+ /*
  alert(mensaje);
 
-}
+
 
 
 

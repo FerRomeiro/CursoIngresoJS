@@ -3,6 +3,12 @@
 
 function mostrar()
 {
+
+
+
+
+
+	
 let destino;
 destino = document.getElementById('txtIdDestino').value;
 /*

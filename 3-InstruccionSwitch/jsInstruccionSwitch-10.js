@@ -4,6 +4,7 @@
 
 function mostrar()
 {
+	
  let estacion;
  let destino;
  let mensaje;
@@ -31,7 +32,7 @@ function mostrar()
 	 }else if( destino == "Cordoba" ){
          mensaje = "Se viaja";
 	 }else{
-		 mensaje = "no se viaja";
+		 mensaje = "no se viaja"
 	 }
  }
  alert(mensaje);
