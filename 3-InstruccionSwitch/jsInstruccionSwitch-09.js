@@ -72,6 +72,12 @@ function mostrar()
 		         }
 	precioNormal = (PASAJE*porcentaje)/100;
 	precioFinal = PASAJE + precioNormal;
+	if( porcentaje > 0){
+        mensaje = "Aumento " + porcentaje + "%";
+	}else{
+		mensaje = "Descuento " + porcentaje + "%"; 
+	}
+
 	alert(mensaje);
 	alert(precioFinal + '$');
 	/*
