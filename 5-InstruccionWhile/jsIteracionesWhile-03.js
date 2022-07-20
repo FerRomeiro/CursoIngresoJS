@@ -1,4 +1,6 @@
 /*
+ALUMNO: FERNANDO ROMERO
+DIV: J
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
