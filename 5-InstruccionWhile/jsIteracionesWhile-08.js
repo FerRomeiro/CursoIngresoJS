@@ -1,19 +1,49 @@
 /*
+ALUMNO: FERNANDO ROMERO MONTERO
+DIV: J
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
-	var contador;
-	var respuesta;
-	var sumaPositivos;
-	var multiplicacionNegativos;
-	contador=0;
-	sumaPositivos=0;
-	multiplicacionNegativos=1;
-	respuesta='si';
+	let numero;
+	let numerosPositivos = 0;
+	let numeroNegativos = 1;
+	let ventana = 'y';
+	let bandera = 0;
 
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
 
-}//FIN DE LA FUNCIÓN
+	while( ventana == 'y' ){
+           numero = prompt('INGRESE UN NUMERO POSITIVO O NEGATIVO');
+		   numero = parseInt(numero); 
+           ventana = prompt('QUIERE INGRESAR OTRO NUMERO y/n');
+		   
+		   if ( numero >= 0 ){
+                numerosPositivos = numerosPositivos + numero;
+		   }
+		   else{
+			    bandera = 1;
+			    numeroNegativos = numeroNegativos * numero;
+		   }
+	}
+
+	if( bandera == 0 ){
+        numeroNegativos = 0;
+	}
+	document.getElementById('txtIdProducto').value = numeroNegativos;
+	document.getElementById('txtIdSuma').value = numerosPositivos;
+			
+
+
+	// OPCION MAS LARGA
+	/*
+	        if( bandera == 0 ){
+                document.getElementById('txtIdProducto').value = 0;
+			}
+			else{
+				document.getElementById('txtIdProducto').value = numeroNegativos;
+			}
+            document.getElementById('txtIdSuma').value = numerosPositivos;
+			*/
+			
+}

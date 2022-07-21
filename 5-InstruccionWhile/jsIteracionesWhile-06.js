@@ -1,3 +1,9 @@
+/*
+ALUMNO: FERNANDO ROMERO
+DIV: J
+*/
+
+
 function mostrar()
 {
 	let numero;
