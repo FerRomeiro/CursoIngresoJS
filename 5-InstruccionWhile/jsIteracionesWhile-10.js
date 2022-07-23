@@ -27,11 +27,29 @@ function mostrar()
 	let diferencia;
 	let resto;
 	let respuesta = 'y';
+	let bandera = 0;
+	let numeroMaximo;
+	let numeroMinimo;
 	
 
     while( respuesta == 'y' ){
            numero = prompt('INGRESE UN NUMERO POSITIVO O NEGATIVO');
 		   numero = parseInt(numero);
+           // numero maximo numero minimo
+		   if( bandera == 0 ){
+			   numeroMaximo = numero;
+			   numeroMinimo = numero;
+			   bandera = 1;
+		   }
+		   else{
+			    if( numero<numeroMinimo ){
+					numeroMinimo = numero;
+				}else{
+					numeroMaximo = numero;
+				}
+		   }
+
+
 
            //cantidad de numeros pares
 		   resto = numero%2;
@@ -59,6 +77,7 @@ function mostrar()
 				}
 		   }
 
+		 
 		   
 		   //diferencia entre positivos y negativos
 		   diferencia = (SumaDeNumerosPositivos-SumaDeNumerosNegativos);
@@ -66,6 +85,7 @@ function mostrar()
 
 		   respuesta = prompt('QUIERE INGRESAR OTRO NUMERO??? y/n');
 	}
+		alert('EL NUMERO MAXIMO INGRESADO ES ' + numeroMaximo + ' Y EL NUMERO MINIMO INGRESADO ES ' + numeroMinimo);
 	    alert('CANTIDAD DE NUMEROS PARES ' + cantidadDeNumerosPares)
 	    alert('CANTIDAD DE CEROS ' + cantidadDeCeros);
 		alert('La suma total de numeros negativos es ' + SumaDeNumerosNegativos + ' y la cantidad total de numeros negativos es ' + contadorDeNumerosNegativos + ' PROMEDIO DE NUMEROS NEGATIVOS ' + promedioTotalNumerosNegativos);

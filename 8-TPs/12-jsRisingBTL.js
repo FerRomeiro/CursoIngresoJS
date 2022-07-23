@@ -9,11 +9,38 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 	//definicion de variables
- 	var edadIngresada;
- 	var sexoIngresado;
- 	var estadoCivilIngresado;
+ 	let edadIngresada;
+	let respuesta = 'y';
+	let sexo;
+	let estadoCivil;
 
+	while(respuesta == 'y'){
+          edadIngresada = prompt('ingrese edad entre 18 y 90 años inclusive');
+		  edadIngresada = parseInt(edadIngresada);
+
+		  while(edadIngresada < 17 || edadIngresada > 90){
+                edadIngresada = prompt('ERROR, ingrese edad nuevamente'); // se tiene q parsear nuevamente el error recordar
+				edadIngresada = parseInt(edadIngresada);
+		  }
+
+		  sexo = prompt('ingrese sexo m/f');
+
+		  while(sexo != "f" && sexo != "m"){
+			sexo = prompt('INGRESE SEXO VALIDO');
+	      }
+
+		  estadoCivil = prompt('Ingrese estado civil (soltero, casado, divorciado y viudo');
+
+		  while(estadoCivil != "soltero" && estadoCivil != "casado" && estadoCivil && "divorciado" && estadoCivil != "viudo" ){
+                estadoCivil = prompt('Ingrese un estado civil valido');
+		  }
+
+		  document.getElementById('txtIdEstadoCivil').value = estadoCivil;
+		  document.getElementById('txtIdSexo').value = sexo;
+		  document.getElementById('txtIdEdad').value = edadIngresada;
+
+		  respuesta = prompt('quiere ingresar otro dato y/n');
+	}
 
 
 }
