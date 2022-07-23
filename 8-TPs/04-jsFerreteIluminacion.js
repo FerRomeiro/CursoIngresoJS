@@ -5,6 +5,75 @@ function CalcularPrecio ()
     const lamparas = 35;
     let cantidadLamparas;
     let precioDescuento;
+    
+    let precioNormal;
+    let marca;
+    let mensaje;
+    let descuento
+    let ingresosBrutos = 10;
+    let precioConIngresosBrutos;
+
+    cantidadLamparas = document.getElementById('txtIdCantidad').value;
+     //precioConDescuento = document.getElementById('txtIdprecioDescuento').value;
+     marca = document.getElementById('Marca').value;
+
+     switch( cantidadLamparas ){ // RECORDA HP ROMPER CON BREAK AMBOS SWITCH SINO NO LEE PUTA
+             case "5":
+             switch(marca){
+             case "ArgentinaLuz":
+                  descuento = 40;
+                  break;
+             default:
+                  descuento = 30;
+                  break;                                          
+             }break;
+             case "4":
+              switch(marca){
+              case "ArgentinaLuz":
+              case "FelipeLamparas":
+                    descuento = 25;
+              break;
+              default:
+                   descuento = 20;
+                    break;
+              }break;
+              case "3":
+              switch(marca){
+              case "ArgentinaLuz":
+                   descuento = 15;
+                   break;
+              case "FelipeLamparas":
+                   descuento = 10;
+                   break;
+              default:
+                   descuento = 5;
+                   break;
+              }break;
+              default:
+              descuento = 50;
+    }
+
+
+     precioDescuento = (((cantidadLamparas*lamparas)*descuento)/100);
+     precioNormal = (cantidadLamparas*lamparas);
+     precioFinal = precioNormal - precioDescuento;
+
+    
+    
+     mensaje = "EL DESCUENTO ES DE " + descuento + "%" + " Y EL PRECIO FINAL ES DE " + precioFinal + "$";
+     if( precioFinal > 120 ){ // IMPORTANTE LEER, "SI PRECIO FINAL ES MAYOR QUE 120" LA PUTA Q TE PARIO NO TE OLVIDES DE ESO HP 
+      precioConIngresosBrutos = precioFinal*ingresosBrutos/100;
+     
+      mensaje = mensaje + " IIBB usted pago " + precioFinal + "$ siendo " + precioConIngresosBrutos + "$ el impuesto que se pago";
+
+    }
+     alert(mensaje);        
+     document.getElementById('txtIdprecioDescuento').value = precioFinal;
+}
+    /*
+    const lamparas = 35;
+    let cantidadLamparas;
+    let precioDescuento;
     let precioFinal;
     let precioNormal;
     let marca;
@@ -73,8 +142,8 @@ function CalcularPrecio ()
      
      alert(mensaje);   
      document.getElementById('txtIdprecioDescuento').value = precioFinal;
-
-    }
+*/
+    
 /*    
 const lamparas = 35;
 let cantidad;
@@ -210,7 +279,7 @@ switch( marca ){
 }
 */
 
-
+/*
 function CalcularPrecio () 
  {
     // VALORLAMPARA = 35
@@ -301,3 +370,4 @@ function CalcularPrecio ()
 
     document.getElementById("txtIdprecioDescuento").value = precioAPagar;
  }
+ */
