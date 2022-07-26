@@ -33,6 +33,8 @@ function mostrar()
         precioPorBolsa=prompt('ERROR, INGRESO DATO CORRECTO');
         precioPorBolsa=parseInt(precioPorBolsa);
   }
+
+  /*
   //Si compro más de 10 bolsas en total tenes 15% de descuento sobre el total a pagar.
   if(bolsas > 10){     
      descuento=15;
@@ -40,20 +42,48 @@ function mostrar()
       
   //Si compro más de 30 bolsas en total tenes 25% de descuento sobre el total a pagar.
   if(bolsas > 30){
-  descuento=25;
+     descuento=25;
   }
   // a) El importe total a pagar , bruto sin descuento y...
   if(bolsas<=10){
      descuento = 0;
-  }    
+  }   
+  */
+  // ASI HICE LOS 3 PUNTOS DE ARRIBA SIN UN IF SEPARADO.
+  if(bolsas>10 && bolsas<31){
+     descuento=15;
+  }
+  else{
+       if(bolsas>30){
+          descuento=25;
+       }else{
+         descuento = 0;
+       }
+  }
+
+
+
+
+
+   
+
   // d) Informar el tipo ("arena";"cal";"cemento") con mas cantidad de bolsas en el total de la compra.
-    if(bolsas>bolsasMax || bandera== 0){
+    if(bolsas>bolsasMax || bandera== 0){     
        bolsasMax = bolsas;
        tipoMax = tipo;
        bandera = 1;
 
     }
-  
+
+    
+
+
+
+    // f) El tipo mas caro
+      if(banderaDelTipoMasCaro == 0 || precioPorBolsa>totalMax ){
+      totalMax = precioPorBolsa;
+      tipoMasCaro = tipo;
+   }
 
 
 
@@ -68,13 +98,9 @@ function mostrar()
       totalPagar=(bolsas*precioPorBolsa);
   }
 
-  // f) El tipo mas caro
-  if(banderaDelTipoMasCaro == 0 || totalPagar>totalMax ){
-     totalMax = totalPagar;
-     tipoMasCaro = tipo;
-  }
+  
 
   document.write('EL TIPO MAS CARO ES ' + tipoMasCaro + ' CON UN TOTAL DE ' + totalPagar + '$' + '<br>');
   document.write('EL TIPO DE BOLSAS CON CANTIDAD ES ' + tipoMax + ' CON UN TOTAL DE ' + bolsasMax + '<br>');
-  document.write('TOTAL A PAGAR CON DESCUENTO DEL ' + descuento + '% ES ' + totalPagar + '<br>');
+  document.write('TOTAL A PAGAR CON DESCUENTO DEL ' + descuento + '% ES ' + totalPagar + '$' + '<br>');
 }

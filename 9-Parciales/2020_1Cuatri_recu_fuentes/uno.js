@@ -10,6 +10,11 @@ function mostrar()
 	let unidadesAlcohol = 0;
 	let fabricanteAlcohol;
 	let banderaTipo = 0;
+	let tipoConMasUnidades;
+	let unidadesTotal;
+	let contadorUnidadesTotal = 0;
+	let promedio;
+
 
 
 	while(contador < 5){
@@ -51,7 +56,11 @@ function mostrar()
 			}			
 	    }
 		//b) Del tipo con mas unidades, el promedio por compra
-
+		if(banderaTipo==0 || tipoConMasUnidades>cantidadUnidades){
+		   tipoConMasUnidades = tipoProducto;
+		   cantidadUnidades = unidadesTotal;
+		   contadorUnidadesTotal = contadorUnidadesTotal + unidadesTotal;
+		}
 		
 
 
@@ -61,7 +70,8 @@ function mostrar()
 		contador = contador + 1;
 
 	}
-
+	promedio = 
+	document.write('EL TIPO CON MAS UNIDADES ES ' + tipoConMasUnidades + ' Y EL PROMEDIO DE ESA COMPRA ES ' + 
 	document.write('ALCOHOL MAS BARATO ' + alcoholMasBarato + '<br>');
 	document.write('UNIDADES DE ALCOHOL ' + unidadesAlcohol + '<br>');
 	document.write('EL FABRICANTE DEL ALCOHOL MAS BARATO ' + fabricanteAlcohol + '<br>');
