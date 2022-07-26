@@ -14,22 +14,16 @@ function mostrar()
     let bandera = 0;
     let letraMinima;
     let letraMaxima;
-    /*
-    PARA QUE INGRESE SOLO UNA LETRA DE LA A A LA Z
-    letra = prompt('ingrse una letra');
-    letra=letra.tolowercase();
-    while( letra.lenght != 1){
-            LETRA = PROMPT('INGRESE UNA LETRA');
-            LETRA =LETRA.LOWERCASE();
-    }
-*/
+   
 
     while(respuesta == 'y'){
 
         
-        letra = prompt('INGRESE UNA LETRA(d, z, g, a, b, k)');
-        while(letra != 'a' && letra != 'd' && letra != 'z' && letra != 'b' && letra != 'k' && letra != 'g'){
-              letra=prompt('INGRESE UNA LETRA VALIDA');
+        letra = prompt('INGRESE UNA LETRA DE LA a A LA z');
+        letra = letra.toLowerCase();
+        while(letra.length != 1){
+              letra = prompt('INGRESE SOLO UNA LETRA');
+              letra = letra.toLowerCase();
         }
         
           numero = prompt('INGRESE UN NUMERO DE -100 A LA 100');         
@@ -63,7 +57,7 @@ function mostrar()
             {
                 promedioPositivos = promedioPositivos + 1;
                 acumuladorPositivos = acumuladorPositivos + numero;
-                TotalPositivos = acumuladorPositivos/promedioPositivos; // POR AFUERA DEL BUCLE SE HACE EL PROMEDIO
+                //TotalPositivos = acumuladorPositivos/promedioPositivos; // POR AFUERA DEL BUCLE SE HACE EL PROMEDIO
             }
             else
             {
@@ -74,23 +68,7 @@ function mostrar()
             }
          }
          // NUMERO Y LETRA DEL MAXIMO Y MINIMO CON SUS LETRAS   
-
-         while(bandera == 0){           // VA CON IF SIEMPRE LAS BANDERAS 
-               numeroMaximo = numero;
-               numeroMinimo = numero;
-
-               bandera = 1;
-               
-         }
-         if(numero<numeroMinimo){
-            numeroMinimo = numero;
-            letraMinima = letra;
-         }
-         else{
-            numeroMaximo = numero;
-            letraMaxima = letra;
-         }
-         /* 
+         
          if(bandera == 0){
             numeroMaximo = numero;
                numeroMinimo = numero;
@@ -108,25 +86,60 @@ function mostrar()
             letraMaxima = letra;
             }
          }
-         */
+        }
 
-        /*
+        
+          
+        
+        respuesta = prompt('QUIERE INGRESAR OTROS DATOS ?? y/n');
+
+    
+    
+
+}
+TotalPositivos = acumuladorPositivos/promedioPositivos;
+document.write("(" + letra + "," + numero + ")" + "<br>"); //DOCUMENTE WRITE VA SIN = RECORDALOOOOOOOOOOOOOOADSSADASDASDOSAODSODSAODASOSDAO
+document.write('LA CANTIDAD DE CEROS SON ' + cantidadDeCeros + '<br>');
+document.write(`LOS NUMEROS PARES SON ${numeroPares} Y NUMERO IMPARES ES IGUAL A ${numeroImpares}<br>`);
+document.write('PROMEDIO DE LOS NUMEROS POSITIVOS ES IGUAL A ' + TotalPositivos + '<br>');
+document.write(`LA SUMA DE LOS NEGATIVOS ES IGUAL A ${totalNegativo}<br>`);
+document.write('EL NUMERO MAXIMO ES ' + numeroMaximo + ' EL NUMERO MINIMO ES ' + numeroMinimo + '<br>');
+document.write('LA LETRA DEL NUMERO MAS BAJO ES ' + letraMinima + '<br>');
+document.write('LA LETRA DEL NUMERO MAS GRANDE ES ' + letraMaxima + '<br>');    
+
+}
+
+
+/*
+letra = prompt('INGRESE UNA LETRA(d, z, g, a, b, k)');
+        while(letra != 'a' && letra != 'd' && letra != 'z' && letra != 'b' && letra != 'k' && letra != 'g'){
+              letra=prompt('INGRESE UNA LETRA VALIDA');
+        }*/
+
+
+
+
+         /*
         if(numero>numeroMaximo || banderaMaxima == 0 ){}
         if(numero<numeroMinimo || banderaMinima == 0){}
         */
 
-          
-        
-        respuesta = prompt('QUIERE INGRESAR OTROS DATOS ?? y/n');
-    }
 
-    document.write("(" + letra + "," + numero + ")" + "<br>"); //DOCUMENTE WRITE VA SIN = RECORDALOOOOOOOOOOOOOOADSSADASDASDOSAODSODSAODASOSDAO
-    document.write('LA CANTIDAD DE CEROS SON ' + cantidadDeCeros + '<br>');
-    document.write(`LOS NUMEROS PARES SON ${numeroPares} Y NUMERO IMPARES ES IGUAL A ${numeroImpares}<br>`);
-    document.write('PROMEDIO DE LOS NUMEROS POSITIVOS ES IGUAL A ' + TotalPositivos + '<br>');
-    document.write(`LA SUMA DE LOS NEGATIVOS ES IGUAL A ${totalNegativo}<br>`);
-    document.write('EL NUMERO MAXIMO ES ' + numeroMaximo + ' EL NUMERO MINIMO ES ' + numeroMinimo + '<br>');
-    document.write('LA LETRA DEL NUMERO MAS BAJO ES ' + letraMinima + '<br>');
-    document.write('LA LETRA DEL NUMERO MAS GRANDE ES ' + letraMaxima + '<br>');    
+ /*
+         while(bandera == 0){           // VA CON IF SIEMPRE LAS BANDERAS 
+               numeroMaximo = numero;
+               numeroMinimo = numero;
 
-}
+               bandera = 1;
+               
+         }
+         if(numero<numeroMinimo){
+            numeroMinimo = numero;
+            letraMinima = letra;
+         }
+         else{
+            numeroMaximo = numero;
+            letraMaxima = letra;
+         }
+         */
+

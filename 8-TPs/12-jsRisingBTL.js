@@ -8,7 +8,137 @@ E.	Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.
 F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para nacionalizados.
  */
 function ComenzarIngreso () 
-{
+{ // promedio de los sueldos de varones argentinos y nacionalizados tmb sexo y estado civil del que mas gana y del que menos gana
+	let edadIngresada;	
+	let sexo;
+	let estadoCivil;
+	let sueldoBruto;
+	let numeroLegajo;
+	let nacionalidad;
+	let respuesta = true;
+	let contadorArgentinos = 0;
+	let contadorNacionalizados = 0;
+	let sueldoVaronesArgentinos = 0;
+	let promedioVaronesArgentinos;
+	let sueldoVaronesNacionalizados = 0;
+	let promedioVaronesNacionalizados;
+	let banderaSueldoMaximo = 0;
+	let sueldoBrutoMaximo;
+	let banderaSueldoMinimo = 0;
+	let sueldoBrutoMinimo;
+	let estadoCivilMayor;
+	let estadoCivilMenor;
+	
+
+	while(respuesta == true){
+		//edad
+		edadIngresada=prompt('INGRESE LA EDAD ENTRE 18 Y 90 AÑOS');
+		edadIngresada=parseInt(edadIngresada);
+
+		while(edadIngresada < 18 || edadIngresada > 90){
+			  edadIngresada=prompt('ERROR, INGRESE EDAD CORRECTA');
+			  edadIngresada=parseInt(edadIngresada);
+		}
+		// sexo
+		sexo=prompt('INGRESE SEXO f/m');
+		sexo=sexo.toLowerCase();
+
+		while(sexo != "f" && sexo != "m"){
+			sexo=prompt('INGRESE SEXO CORRECTO f/m');
+
+		}
+		// estado civil
+		estadoCivil=prompt('INGRESE ESTADO CIVIL (soltero,casado,viudo,divorciado)');
+		
+		while(estadoCivil != "soltero" && estadoCivil != "casado" && estadoCivil != "viudo" && estadoCivil != "divorciado"){
+			  estadoCivil=prompt('INGRESE ESTADO CIVIL CORRECTO');
+		}
+		//sueldo bruto
+		sueldoBruto=prompt('INGRESE SUELDO BRUTO NO MENOR A 8000$');
+		sueldoBruto=parseInt(sueldoBruto);
+
+		while(sueldoBruto < 8000){
+			  sueldoBruto=prompt('DEBE SER MAYOR A 8000$');
+			  sueldoBruto=parseInt(sueldoBruto);
+		}
+		// numero de legajo
+		numeroLegajo=prompt('INGRESE NUMERO DE LEGAJO');
+		numeroLegajo=parseInt(numeroLegajo);
+
+		while(numeroLegajo < 1000 || numeroLegajo > 9999){
+			  numeroLegajo=prompt('INGRESE LEGAJO CORRESPONDIENTE');
+			  numeroLegajo=parseInt(numeroLegajo);
+		}
+		//nacionalidad
+		nacionalidad=prompt('INGRESE NACIONALIDAD a, e O n');
+		nacionalidad=nacionalidad.toLowerCase();
+
+		while(nacionalidad != "a" && nacionalidad != "e" && nacionalidad != "n"){
+			 nacionalidad=prompt('INGRESE NACIONALIDAD CORRESPONDIENTE');
+		}
+		// contador de varones argentinos
+		if(nacionalidad == "a" && sexo == "m"){
+		   contadorArgentinos = contadorArgentinos + 1;
+		   sueldoVaronesArgentinos = sueldoVaronesArgentinos + sueldoBruto; // sueldoVaronesARgentinos += sueldobruto
+		}
+		// contador de varones nacionalizados
+		if(nacionalidad == "n" && sexo == "m"){
+		   contadorNacionalizados = contadorNacionalizados + 1;
+		   sueldoVaronesNacionalizados = sueldoVaronesNacionalizados + sueldoBruto;
+		}
+
+		// estado civil del que mas gana y menos gana
+		if(banderaSueldoMaximo == 0 || sueldoBruto>sueldoBrutoMaximo){
+		   sueldoBrutoMaximo = sueldoBruto;	
+		   estadoCivilMayor = estadoCivil;
+		   banderaSueldoMaximo = 1;
+		}
+		if(banderaSueldoMinimo == 0 || sueldoBruto<sueldoBrutoMinimo){
+		   sueldoBrutoMinimo = sueldoBruto;
+		   estadoCivilMenor = estadoCivil;
+		   banderaSueldoMinimo = 1;
+		}
+
+
+		respuesta = confirm('QUIERE INGRESAR A OTRA PERSONA ?? ');
+	}
+
+
+
+
+	promedioVaronesArgentinos=(sueldoVaronesArgentinos/contadorArgentinos);
+	promedioVaronesNacionalizados=(sueldoVaronesNacionalizados/contadorNacionalizados);
+
+	document.write('EL ESTADO CIVIL DEL SUELDO MAS BAJO ES ' + estadoCivilMenor + '<br>');
+	document.write('EL ESTADO CIVIL DEL QUE MAS GANA ES ' + estadoCivilMayor + '<br>');
+	document.write('PROMEDIO DE SUELDO DE VARONES ARGENTINOS ES ' + promedioVaronesArgentinos +'<br>');
+	document.write('PROMEDIO DE SUELDO DE VARONES NACIONALIZADOS ES ' + promedioVaronesNacionalizados + '<br>');
+
+	document.getElementById('txtIdNacionalidad').value = nacionalidad;
+	document.getElementById('txtIdLegajo').value = numeroLegajo;
+	document.getElementById('txtIdSueldo').value = sueldoBruto;
+	document.getElementById('txtIdEstadoCivil').value = estadoCivil;
+	document.getElementById('txtIdSexo').value = sexo;
+	document.getElementById('txtIdEdad').value = edadIngresada;
+	//document.write('EDAD INGRESADA ES ' + edadIngresada);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/*
  	let edadIngresada;
 	let respuesta = 'y';
@@ -80,7 +210,7 @@ ahora se solicita el ingreso de 10 personas para el censo realizando
 las validaciones necesarias. Ademas se debe informar el promedio de edades 
 de las personas de sexo femenino.
 */
-
+/*
 	let edadIngresada;	
 	let sexo;
 	let estadoCivil;
@@ -147,7 +277,7 @@ de las personas de sexo femenino.
 
 	alert('promedio de edades femeninas es ' + promedioF);
     
-
+*/
 
 		  /*
 		  //ESTADO CIVIL
